@@ -1,1 +1,1 @@
-Tài liệu Y sinh học - Di truyền
+Y sinh học - Di truyền
