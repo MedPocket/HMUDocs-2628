@@ -8,6 +8,8 @@ Chương này trình bày các kiểm định phi tham số (Non-parametric Test
 
 So sánh tỷ lệ quan sát được từ mẫu nghiên cứu với một tỷ lệ chuẩn/lý thuyết $p_0$ đã cho trước.
 
+Đường dẫn thực hiện lệnh:
+
 ```text
 Analyze > Nonparametric Tests > Legacy Dialogs > Binomial...
 ```
@@ -16,12 +18,10 @@ Analyze > Nonparametric Tests > Legacy Dialogs > Binomial...
 
 ## 2. Kiểm Định Mối Liên Quan Giữa Hai Biến Định Tính (Chi-Square Test - $\chi^2$)
 
-![Chi-Square Test Output](_images/img-5-ty-le-1.png)
-
 Đường dẫn thực hiện lệnh:
 
 ```text
-Analyze > Descriptive Statistics > Crosstabs...
+Analyze > Descriptive Statistics > Crosstabs... > Statistics... > [x] Chi-square [x] Risk
 ```
 
 > **Quy tắc chọn kết quả Khi bình phương trong Bảng $2 \times 2$:**
@@ -48,8 +48,6 @@ Analyze > Descriptive Statistics > Crosstabs...
 ## 4. Kiểm Định Hai Tỷ Lệ Ghép Cặp (McNemar Test)
 
 So sánh tỷ lệ mắc bệnh / đạt tiêu chuẩn của cùng một nhóm đối tượng tại 2 thời điểm (Trước vs Sau can thiệp).
-
-![McNemar Test Output](_images/img-5-ty-le-2.png)
 
 Đường dẫn thực hiện lệnh:
 

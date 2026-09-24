@@ -17,17 +17,14 @@ Thống kê mô tả (Descriptive Statistics) tóm tắt, mô tả và trình b�
 
 ## 2. Thống Kê Mô Tả Biến Định Tính
 
-![Frequencies Output](_images/img-3-thong-ke-1.png)
+Đường dẫn thực hiện lệnh bảng tần số và tỷ lệ phần trăm:
 
-### 2.1. Chỉ số báo cáo
-- Tần số ($n$): Số lượng quan sát ở từng biểu hiện.
-- Tỷ lệ phần trăm ($\%$): Báo cáo giá trị `Valid Percent` (tỷ lệ trên các bản ghi hợp lệ sau khi loại trừ missing).
-
-### 2.2. Lệnh SPSS
 ```text
 Analyze > Descriptive Statistics > Frequencies...
 ```
-> **Thao tác vẽ biểu đồ:** Trong cửa sổ `Frequencies`, bấm `Charts...` -> Chọn `Bar charts` hoặc `Pie charts` -> Chọn `Percentages` -> Bấm `OK`.
+
+> **Chỉ số báo cáo:** Tần số ($n$) và tỷ lệ phần trăm hợp lệ (`Valid Percent`).
+> **Biểu đồ phù hợp:** Biểu đồ cột rời (`Bar Chart`) hoặc biểu đồ hình tròn (`Pie Chart`).
 
 ---
 
@@ -35,41 +32,32 @@ Analyze > Descriptive Statistics > Frequencies...
 
 Để báo cáo biến định lượng chuẩn xác, bắt buộc phải khảo sát xem biến số có tuân theo **Phân phối chuẩn (Normal Distribution)** hay không.
 
-![Histogram Output](_images/img-3-thong-ke-2.png)
+Đường dẫn thực hiện lệnh khảo sát phân phối chuẩn:
 
-### 3.1. Các tiêu chí đánh giá phân phối chuẩn
-1. **Chỉ số thống kê**: `Mean` và `Median` xấp xỉ bằng nhau; `Skewness` và `Kurtosis` nằm trong khoảng $[-1.0, +1.0]$.
-2. **Biểu đồ**: Histogram có dạng hình chuông đối xứng.
-3. **Kiểm định giả thuyết**: Kiểm định Kolmogorov-Smirnov ($N \ge 50$) hoặc Shapiro-Wilk ($N < 50$).
-   - Nếu $p > 0.05$: Biến có phân phối chuẩn.
-   - Nếu $p \le 0.05$: Biến có phân phối không chuẩn.
+```text
+Analyze > Descriptive Statistics > Explore... > Plots... > [x] Histogram [x] Normality plots with tests
+```
 
-### 3.2. Quy tắc trình bày chỉ số thống kê trong báo cáo y học
+### Quy tắc trình bày chỉ số thống kê trong báo cáo y học:
 
 | Phân phối dữ liệu | Chỉ số tập trung | Chỉ số phân tán | Trình bày chuẩn bài báo khoa học |
 | :--- | :--- | :--- | :--- |
 | **Phân phối Chuẩn** | Trung bình (`Mean`) | Độ lệch chuẩn (`SD`) | $\bar{X} \pm SD$ (Ví dụ: $45.2 \pm 8.6$ tuổi) |
 | **Phân phối Không chuẩn** | Trung vị (`Median`) | Khoảng tứ phân vị (`IQR`) | $Median (IQR)$ (Ví dụ: $5.8 (4.2 - 8.1) \text{ mg/dL}$) |
 
-![Boxplot Output](_images/img-3-thong-ke-3.png)
-
-```text
-Analyze > Descriptive Statistics > Explore... > Plots... > [x] Histogram [x] Normality plots with tests
-```
-
 ---
 
 ## 4. Mô Tả Mối Quan Hệ Giữa Hai Biến Số
 
-- **Biến Định tính x Biến Định tính**: Dùng bảng chéo `Crosstabs`.
+- **Biến Định tính x Biến Định tính**: Bảng chéo `Crosstabs`.
   ```text
   Analyze > Descriptive Statistics > Crosstabs... > Cells... > [x] Row
   ```
-- **Biến Định tính x Biến Định lượng**: Dùng `Case Summaries`.
+- **Biến Định tính x Biến Định lượng**: `Case Summaries`.
   ```text
   Analyze > Reports > Case Summaries...
   ```
-- **Hai Biến Định lượng**: Dùng tương quan `Bivariate` và biểu đồ phân tán `Scatterplot`.
+- **Hai Biến Định lượng**: Hệ số tương quan `Bivariate` và biểu đồ phân tán `Scatterplot`.
   ```text
   Analyze > Correlate > Bivariate...
   ```

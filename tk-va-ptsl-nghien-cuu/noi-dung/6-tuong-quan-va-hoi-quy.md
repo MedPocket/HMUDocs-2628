@@ -6,8 +6,6 @@ Chương này trình bày các phương pháp đánh giá mối liên hệ tuy�
 
 ## 1. Phân Tích Tương Quan Tuyến Tính (Correlation)
 
-![Correlations Matrix Output](_images/img-6-hoi-quy-1.png)
-
 ### 1.1. Hệ số tương quan Pearson ($r$) và Spearman ($\rho$)
 - **Pearson ($r$)**: Hai biến định lượng phân phối chuẩn.
 - **Spearman ($\rho$)**: Biến phân phối không chuẩn hoặc biến thứ tự (Ordinal).
@@ -17,6 +15,8 @@ Chương này trình bày các phương pháp đánh giá mối liên hệ tuy�
 - $0.3 \le |r| < 0.5$: Tương quan trung bình.
 - $0.5 \le |r| < 0.7$: Tương quan chặt chẽ.
 - $|r| \ge 0.7$: Tương quan rất chặt chẽ.
+
+Đường dẫn thực hiện lệnh:
 
 ```text
 Analyze > Correlate > Bivariate...
@@ -30,7 +30,7 @@ Biểu diễn mối quan hệ phụ thuộc của biến phụ thuộc định l
 
 $$Y = \beta_0 + \beta_1 X + \epsilon$$
 
-![Linear Regression Output](_images/img-6-hoi-quy-2.png)
+Đường dẫn thực hiện lệnh:
 
 ```text
 Analyze > Regression > Linear...
@@ -48,7 +48,7 @@ Analyze > Regression > Linear...
 
 $$\text{logit}(P) = \ln\left(\frac{P}{1 - P}\right) = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \dots$$
 
-![Binary Logistic Regression Output](_images/img-6-hoi-quy-3.png)
+Đường dẫn thực hiện lệnh:
 
 ```text
 Analyze > Regression > Binary Logistic... > Options... > [x] CI for exp(B): 95%

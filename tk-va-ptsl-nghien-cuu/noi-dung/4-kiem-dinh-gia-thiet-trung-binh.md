@@ -8,8 +8,6 @@ Kiểm định giả thuyết về giá trị trung bình thuộc nhóm kiểm �
 
 So sánh giá trị trung bình $\bar{X}$ thu được từ mẫu nghiên cứu với một giá trị lý thuyết / chuẩn $\mu_0$ đã biết trước.
 
-![One-Sample T Test Output](_images/img-4-kiem-dinh-1.png)
-
 Đường dẫn thực hiện lệnh:
 
 ```text
@@ -23,8 +21,6 @@ Analyze > Compare Means > One-Sample T Test...
 ## 2. Kiểm Định So Sánh Hai Giá Trị Trung Bình Độc Lập (Independent-Samples T-Test)
 
 So sánh trung bình của 2 nhóm đối tượng độc lập (ví dụ: Nam vs Nữ, Bệnh vs Chứng).
-
-![Independent Samples T Test Output](_images/img-4-kiem-dinh-2.png)
 
 Đường dẫn thực hiện lệnh:
 
@@ -44,6 +40,8 @@ Analyze > Compare Means > Independent-Samples T Test...
 
 So sánh trung bình của cùng một nhóm đối tượng được đo lường tại 2 thời điểm khác nhau (Trước vs Sau can thiệp).
 
+Đường dẫn thực hiện lệnh:
+
 ```text
 Analyze > Compare Means > Paired-Samples T Test...
 ```
@@ -53,8 +51,6 @@ Analyze > Compare Means > Paired-Samples T Test...
 ## 4. Kiểm Định So Sánh Nhiều Giá Trị Trung Bình (One-Way ANOVA)
 
 So sánh giá trị trung bình trên $\ge 3$ nhóm độc lập (ví dụ: So sánh điểm hài lòng giữa CBYT ở 6 tỉnh thành).
-
-![ANOVA Output](_images/img-4-kiem-dinh-3.png)
 
 Đường dẫn thực hiện lệnh:
 
