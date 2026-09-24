@@ -46,8 +46,7 @@
 3. Kiểm định so sánh 2 giá trị trung bình độc lập: Independent-Samples T-Test
    - Đọc và giải thích kiểm định bình đẳng phương sai Levene (Levene's Test for Equality of Variances)
    - Đọc kết quả p-value trong 2 trường hợp: Equal variances assumed & Equal variances not assumed
-4. Kiểm định so sánh 2 giá trị trung bình ghép cặp: Paired-Samples T-Test (Trước - Sau can thiệp)
-5. Kiểm định so sánh nhiều giá trị trung bình (ANOVA 1 yếu tố): One-Way ANOVA
+4. Kiểm định so sánh nhiều giá trị trung bình (ANOVA 1 yếu tố): One-Way ANOVA
    - Kiểm định đồng nhất phương sai (Homogeneity of Variance)
    - So sánh bội cặp Post-Hoc (LSD, Bonferroni, Tukey, Games-Howell)
 
@@ -79,7 +78,6 @@
 
 ---
 
-## Nguồn Dữ Liệu Thực Hành & Đề Cương Ôn Tập
+## Điều Hướng Bài Học
 
-- Bộ số liệu ví dụ bao gồm: ungthu.sav, daithaoduong.sav, dieutriyhct.sav, staff-satisfaction.sav, so-lieu-nghien-cuu-tang-huyet-ap.sav.
-- Tham khảo các câu hỏi ôn tập thi lý thuyết và thực hành SPSS dành cho sinh viên và học viên Chuyên khoa 1 (CK1) Y Dược.
+[Chương 1: Tổng quan và Nhập liệu >](1-tong-quan-va-nhap-lieu-spss.md)

@@ -1,128 +1,74 @@
 # Chương 4: Kiểm Định Giả Thuyết Về Giá Trị Trung Bình
 
-Trong nghiên cứu y sinh và quản lý, việc so sánh giá trị trung bình giữa các nhóm đối tượng (ví dụ: so sánh huyết áp trung bình giữa nam và nữ, hoặc so sánh hiệu quả giảm đường huyết trước và sau điều trị) là nhu cầu vô cùng phổ biến. Chương này trình bày các kiểm định tham số (Parametric Tests) để kiểm định giá trị trung bình.
+Kiểm định giả thuyết về giá trị trung bình thuộc nhóm kiểm định tham số (Parametric Tests), áp dụng cho các biến phụ thuộc định lượng có phân phối chuẩn.
 
 ---
 
-## 1. Cơ Sở Lý Thuyết Kiểm Định Giả Thuyết Thống Kê
+## 1. Kiểm Định Một Giá Trị Trung Bình (One-Sample T-Test)
 
-Mọi kiểm định thống kê đều dựa trên việc đối chiếu hai giả thuyết bác bỏ nhau:
-- Giả thuyết Không (H0): "Không có sự khác biệt" hoặc "Không có sự liên quan" giữa các quần thể.
-- Giả thuyết Đối (Ha): "Có sự khác biệt" hoặc "Có sự liên quan" giữa các quần thể.
+So sánh giá trị trung bình $\bar{X}$ thu được từ mẫu nghiên cứu với một giá trị lý thuyết / chuẩn $\mu_0$ đã biết trước.
 
-### Quy tắc quyết định dựa trên p-value:
-- Mức ý nghĩa thống kê alpha: Mặc định chọn alpha = 0.05 (độ tin cậy 95%).
-- Nếu p < 0.05: Bác bỏ H0, chấp nhận Ha -> Khác biệt có ý nghĩa thống kê.
-- Nếu p >= 0.05: Chưa đủ cơ sở bác bỏ H0 -> Khác biệt không có ý nghĩa thống kê.
+![One-Sample T Test Output](_images/img-4-kiem-dinh-1.png)
 
----
+Đường dẫn thực hiện lệnh:
 
-## 2. Kiểm Định Một Giá Trị Trung Bình (One-Sample T-Test)
+```text
+Analyze > Compare Means > One-Sample T Test...
+```
 
-### 2.1. Mục đích
-So sánh giá trị trung bình mẫu X_bar thu được từ nghiên cứu với một giá trị lý thuyết/chuẩn mu_0 đã biết trước.
-
-![One-Sample T Test Result](_images/img-4-kiem-dinh-1.png)
-
-### 2.2. Điều kiện áp dụng
-- Biến phụ thuộc là biến định lượng liên tục có phân phối chuẩn.
-
-### 2.3. Ví dụ thực tế
-Ví dụ: Kiểm tra xem điểm hài lòng công việc trung bình của cán bộ y tế trong nghiên cứu năm 2015 có khác biệt so với mức chuẩn lý thuyết 3.5 điểm hay không?
-- H0: Điểm trung bình hài lòng = 3.5
-- Ha: Điểm trung bình hài lòng != 3.5
-
-### 2.4. Thao tác SPSS
-1. Vào menu: Analyze > Compare Means > One-Sample T Test...
-2. Chuyển biến định lượng (ví dụ: diem_hai_long) vào ô Test Variable(s).
-3. Tại ô Test Value: Nhập giá trị so sánh = 3.5.
-4. Bấm OK.
-
-### 2.5. Đọc kết quả Output & Kết luận
-- Xem bảng One-Sample Test:
-  - Đọc giá trị t, bậc tự do df và p-value tại cột Sig. (2-tailed).
-  - Cột Mean Difference: Độ lệch giữa trung bình mẫu và giá trị chuẩn.
-- Kết luận ví dụ: Nếu Sig. (2-tailed) = .000 < 0.05 -> Bác bỏ H0. Có sự khác biệt có ý nghĩa thống kê giữa điểm trung bình hài lòng của CBYT (3.14 +- 0.42) so với mức 3.5 điểm (p < 0.001).
+> **Đọc kết quả:** Nhìn cột `Sig. (2-tailed)`. Nếu $p < 0.05 \rightarrow$ Bác bỏ $H_0$, trung bình mẫu khác biệt có ý nghĩa thống kê so với giá trị chuẩn.
 
 ---
 
-## 3. Kiểm Định So Sánh Hai Giá Trị Trung Bình Độc Lập (Independent-Samples T-Test)
+## 2. Kiểm Định So Sánh Hai Giá Trị Trung Bình Độc Lập (Independent-Samples T-Test)
 
-### 3.1. Mục đích
-So sánh giá trị trung bình của một biến định lượng giữa hai nhóm đối tượng độc lập hoàn toàn với nhau (ví dụ: Nam vs Nữ; Nhóm bệnh vs Nhóm chứng; Nhóm dùng thuốc A vs Nhóm dùng Placebo).
+So sánh trung bình của 2 nhóm đối tượng độc lập (ví dụ: Nam vs Nữ, Bệnh vs Chứng).
 
-![Independent Samples T Test & Levene Test](_images/img-4-kiem-dinh-2.png)
+![Independent Samples T Test Output](_images/img-4-kiem-dinh-2.png)
 
-### 3.2. Điều kiện áp dụng
-- Biến định lượng ở 2 nhóm có phân phối chuẩn.
-- Các quan sát ở 2 nhóm độc lập nhau.
+Đường dẫn thực hiện lệnh:
 
-### 3.3. Ví dụ thực tế
-Ví dụ: So sánh điểm hài lòng trung bình giữa cán bộ y tế Nam và Nữ.
+```text
+Analyze > Compare Means > Independent-Samples T Test...
+```
 
-### 3.4. Thao tác SPSS
-1. Vào menu: Analyze > Compare Means > Independent-Samples T Test...
-2. Đưa biến định lượng (diem_hai_long) vào ô Test Variable(s).
-3. Đưa biến phân nhóm định tính (gioi_tinh) vào ô Grouping Variable.
-4. Bấm nút Define Groups...:
-   - Group 1: Nhập 1 (Nam)
-   - Group 2: Nhập 2 (Nữ)
-   - Bấm Continue.
-5. Bấm OK.
-
-### 3.5. Đọc kết quả Output (Bắt buộc đọc 2 bước)
-
-1. Bước 1: Kiểm định tính đồng nhất phương sai (Levene's Test)
-   - Nhìn cột Sig. thuộc mục Levene's Test for Equality of Variances.
-   - Nếu Sig. >= 0.05: Phương sai 2 nhóm đồng nhất -> Đọc kết quả T-test ở hàng trên (Equal variances assumed).
-   - Nếu Sig. < 0.05: Phương sai 2 nhóm không đồng nhất -> Đọc kết quả T-test ở hàng dưới (Equal variances not assumed).
-2. Bước 2: Đọc kết quả kiểm định T-Test
-   - Đọc cột Sig. (2-tailed) ở hàng tương ứng xác định từ Bước 1.
-   - Nếu Sig. (2-tailed) < 0.05: Sự khác biệt trung bình giữa 2 nhóm có ý nghĩa thống kê.
+> **Quy trình đọc kết quả bắt buộc 2 bước:**
+> 1. **Bước 1**: Đọc kiểm định phương sai Levene (`Levene's Test for Equality of Variances` - cột `Sig.`):
+>    - Nếu $Sig. \ge 0.05$: Phương sai 2 nhóm đồng nhất -> Đọc kết quả T-Test ở hàng trên (`Equal variances assumed`).
+>    - Nếu $Sig. < 0.05$: Phương sai 2 nhóm không đồng nhất -> Đọc kết quả T-Test ở hàng dưới (`Equal variances not assumed`).
+> 2. **Bước 2**: Đọc giá trị $p$-value tại cột `Sig. (2-tailed)` của hàng tương ứng. Nếu $p < 0.05 \rightarrow$ Sự khác biệt trung bình giữa 2 nhóm có ý nghĩa thống kê.
 
 ---
 
-## 4. Kiểm Định So Sánh Hai Giá Trị Trung Bình Ghép Cặp (Paired-Samples T-Test)
+## 3. Kiểm Định So Sánh Hai Giá Trị Trung Bình Ghép Cặp (Paired-Samples T-Test)
 
-### 4.1. Mục đích
-So sánh 2 giá trị trung bình của cùng một nhóm đối tượng nhưng được đo lường tại 2 thời điểm khác nhau (thường là Trước - Sau can thiệp) hoặc ghép cặp theo cặp quan sát trùng lặp.
+So sánh trung bình của cùng một nhóm đối tượng được đo lường tại 2 thời điểm khác nhau (Trước vs Sau can thiệp).
 
-### 4.2. Ví dụ thực tế
-Ví dụ: Đánh giá chỉ số đường huyết trung bình của bệnh nhân trước và sau 3 tháng điều trị bằng bài thuốc YHCT.
-
-### 4.3. Thao tác SPSS
-1. Vào menu: Analyze > Compare Means > Paired-Samples T Test...
-2. Chọn đồng thời 2 biến: Biến trước (duong_huyet_truoc) và Biến sau (duong_huyet_sau) đưa vào ô Paired Variables.
-3. Bấm OK.
-
-### 4.4. Đọc kết quả Output
-- Đọc bảng Paired Samples Test:
-  - Cột Mean: Mức độ chênh lệch trung bình giữa Trước và Sau.
-  - Cột Sig. (2-tailed): Giá trị p-value. Nếu p < 0.05, kết luận điều trị can thiệp làm thay đổi trung bình có ý nghĩa thống kê.
+```text
+Analyze > Compare Means > Paired-Samples T Test...
+```
 
 ---
 
-## 5. Kiểm Định So Sánh Nhiều Giá Trị Trung Bình (One-Way ANOVA)
+## 4. Kiểm Định So Sánh Nhiều Giá Trị Trung Bình (One-Way ANOVA)
 
-### 5.1. Mục đích
-So sánh giá trị trung bình của một biến định lượng trên nhiều hơn 2 nhóm đối tượng độc lập (ví dụ: So sánh điểm hài lòng CBYT giữa 6 tỉnh thành phố).
+So sánh giá trị trung bình trên $\ge 3$ nhóm độc lập (ví dụ: So sánh điểm hài lòng giữa CBYT ở 6 tỉnh thành).
 
-![One-Way ANOVA & Post-Hoc Output](_images/img-4-kiem-dinh-3.png)
+![ANOVA Output](_images/img-4-kiem-dinh-3.png)
 
-### 5.2. Tại sao không dùng nhiều kiểm định T-Test?
-Nếu so sánh 6 nhóm bằng T-Test, chúng ta phải làm 15 lần kiểm định T-Test. Việc này sẽ làm sai lệch xác suất mắc lỗi loại I (alpha) tăng lên rất nhiều (alpha_tong = 1 - (1 - 0.05)^15 ~ 53.6%). ANOVA giúp giải quyết bài toán này chỉ trong một lần kiểm định duy nhất.
+Đường dẫn thực hiện lệnh:
 
-### 5.3. Thao tác SPSS
-1. Vào menu: Analyze > Compare Means > One-Way ANOVA...
-2. Đưa biến định lượng (diem_hai_long) vào Dependent List.
-3. Đưa biến phân nhóm (>= 3 nhóm, ví dụ: tinh_thanh) vào Factor.
-4. Vào Options...: Tích chọn Descriptive (Mô tả) và Homogeneity of variance test (Kiểm định phương sai đồng nhất).
-5. Vào Post Hoc... (Kiểm định so sánh bội sau ANOVA):
-   - Nếu phương sai đồng nhất: Tích chọn Tukey hoặc LSD / Bonferroni.
-   - Nếu phương sai không đồng nhất: Tích chọn Games-Howell.
-6. Bấm Continue -> OK.
+```text
+Analyze > Compare Means > One-Way ANOVA... > Post Hoc... > [x] Tukey
+```
 
-### 5.4. Đọc kết quả Output
-1. Kiểm định Homogeneity of Variances: Đảm bảo Sig. >= 0.05 để thỏa mãn giả định ANOVA.
-2. Bảng ANOVA: Đọc cột Sig.. Nếu Sig. < 0.05 -> Có ít nhất một cặp nhóm có sự khác biệt về giá trị trung bình.
-3. Bảng Multiple Comparisons (Post-Hoc): Nhìn từng cặp so sánh để chỉ ra chính xác nhóm nào khác biệt so với nhóm nào (dựa vào dấu * hoặc Sig. < 0.05 từng cặp).
+> **Cách đọc kết quả ANOVA:**
+> 1. Đọc kiểm định đồng nhất phương sai `Test of Homogeneity of Variances` ($Sig. \ge 0.05$).
+> 2. Đọc bảng `ANOVA`: Nếu $Sig. < 0.05 \rightarrow$ Có ít nhất một cặp nhóm khác biệt nhau về trung bình.
+> 3. Đọc bảng `Multiple Comparisons (Post-Hoc)`: Tìm chính xác từng cặp nhóm nào khác biệt nhau ($p < 0.05$).
+
+---
+
+## Điều Hướng Bài Học
+
+[< Chương Trước: Thống kê mô tả](3-thong-ke-mo-ta-va-trinh-bay-du-lieu.md) | [Mục lục](0-muc-luc.md) | [Chương Sau: Kiểm định tỷ lệ & biến định tính >](5-kiem-dinh-ty-le-va-bien-dinh-tinh.md)

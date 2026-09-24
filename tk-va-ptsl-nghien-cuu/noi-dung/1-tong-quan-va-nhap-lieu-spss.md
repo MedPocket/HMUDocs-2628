@@ -1,10 +1,10 @@
 # Chương 1: Tổng Quan Về SPSS Và Quản Lý Nhập Dữ Liệu Nghiên Cứu
 
-## 1. Tổng Quan Về Phần Mềm SPSS Statistics
+## 1. Tổng Quan Về SPSS Statistics Trong Nghiên Cứu Khoa Học
 
-SPSS (Statistical Package for the Social Sciences) là một trong những phần mềm phân tích thống kê phổ biến nhất thế giới, được áp dụng rộng rãi trong các nghiên cứu Y - Dược học, Y tế công cộng, Quản lý Bệnh viện, Xây dựng và Khoa học Xã hội. Phiên bản hiện nay do hãng IBM phát triển với tên gọi chính thức là IBM SPSS Statistics.
+SPSS (Statistical Package for the Social Sciences) là một trong những hệ thống phần mềm phân tích thống kê phổ biến nhất thế giới. SPSS được ứng dụng rộng rãi trong nghiên cứu Y - Dược học, Y tế công cộng, Dịch tễ học, Quản lý bệnh viện và Khoa học xã hội. Phiên bản hiện nay được tập đoàn IBM quản lý và phát triển với tên gọi chính thức là IBM SPSS Statistics.
 
-SPSS cung cấp môi trường quản lý dữ liệu mạnh mẽ, giao diện đồ họa trực quan (GUI) với các menu thả xuống, giúp các nhà nghiên cứu xử lý bộ dữ liệu từ đơn giản đến phức tạp mà không nhất thiết phải viết mã lệnh phức tạp.
+Giao diện SPSS được thiết kế theo dạng hệ thống menu thả xuống (pull-down menu) trực quan, cho phép nghiên cứu viên thực hiện hầu hết các thao tác từ quản lý dữ liệu, kiểm định thống kê đến vẽ biểu đồ mà không bắt buộc phải viết mã lệnh phức tạp.
 
 ![Giao diện chính SPSS Statistics](_images/img-1-tong-quan-1.png)
 
@@ -12,14 +12,14 @@ SPSS cung cấp môi trường quản lý dữ liệu mạnh mẽ, giao diện �
 
 ## 2. Giao Diện Làm Việc Của SPSS
 
-Giao diện chính của SPSS gồm hai màn hình/chế độ xem (chuyển đổi qua lại bằng tab ở góc dưới bên trái):
+Giao diện làm việc chính của SPSS bao gồm 2 chế độ hiển thị (tabs ở góc dưới bên trái màn hình):
 
-### 2.1. Chế độ Data View (Chế độ dữ liệu)
-- Cấu trúc hàng: Mỗi hàng đại diện cho một đối tượng nghiên cứu hay một bản ghi (Case/Observation), ví dụ: bệnh nhân N_1, N_2, ...
-- Cấu trúc cột: Mỗi cột đại diện cho một biến số nghiên cứu (Variable), ví dụ: MaBN, Tuoi, GioiTinh, HuyetAp.
+### 2.1. Màn hình Data View (Hiển thị dữ liệu thực tế)
+- Mỗi hàng (Row) tương ứng với một bản ghi hay một đối tượng nghiên cứu (Case / Observation), ví dụ: Bệnh nhân 1, Bệnh nhân 2,...
+- Mỗi cột (Column) tương ứng với một biến số nghiên cứu (Variable), ví dụ: Mã bệnh nhân, Tuổi, Giới tính, Huyết áp tâm thu.
 
-### 2.2. Chế độ Variable View (Chế độ biến số)
-Đây là nơi khai báo và thiết lập toàn bộ đặc tính, cấu trúc dữ liệu cho từng biến trước khi nhập số liệu. Mỗi hàng đại diện cho 1 biến số, với 11 cột thuộc tính quan trọng.
+### 2.2. Màn hình Variable View (Khai báo thuộc tính biến)
+Nơi nghiên cứu viên tiến hành định nghĩa cấu trúc dữ liệu, các thuộc tính của biến số trước khi nhập liệu thực tế.
 
 ---
 
@@ -27,52 +27,59 @@ Giao diện chính của SPSS gồm hai màn hình/chế độ xem (chuyển đ�
 
 ![Khai báo 11 thuộc tính biến trong Variable View](_images/img-1-tong-quan-2.png)
 
-| STT | Tên thuộc tính | Ý nghĩa và Quy tắc chuẩn | Ví dụ minh họa |
-| :--- | :--- | :--- | :--- |
-| 1 | Name | Tên viết tắt của biến. Viết liền không dấu, không chứa khoảng trắng, không bắt đầu bằng số hay ký tự đặc biệt. | gioi_tinh, BMI, sBP |
-| 2 | Type | Kiểu dữ liệu. Thường dùng: Numeric (số), String (chuỗi văn bản), Date (ngày tháng). | Numeric cho Tuổi, Date cho Ngày vào viện |
-| 3 | Width | Độ rộng tối đa của chuỗi ký tự hoặc chữ số. | Đặt mặc định = 8 |
-| 4 | Decimals | Số chữ số thập phân hiển thị sau dấu phẩy. | Biến đếm/định tính = 0; Chiều cao = 1 |
-| 5 | Label | Nhãn giải thích đầy đủ ý nghĩa của biến số (cho phép viết tiếng Việt có dấu). | "Giới tính của bệnh nhân", "Huyết áp tâm thu (mmHg)" |
-| 6 | Values | Gán giá trị mã hóa cho các biến định tính/mã hóa nhóm. | 1 = Nam, 2 = Nữ; 1 = Nhẹ, 2 = Vừa, 3 = Nặng |
-| 7 | Missing | Khai báo các giá trị khuyết thiếu (khám thiếu, không trả lời). | Gán 99 hoặc 999 là User-defined missing |
-| 8 | Columns | Độ rộng hiển thị của cột trên màn hình Data View. | Mặc định = 8 |
-| 9 | Align | Căn lề hiển thị dữ liệu (Left, Right, Center). | Định lượng căn Phải, Định tính căn Giữa/Trái |
-| 10 | Measure | Thang đo của biến số (Rất quan trọng cho việc chọn kiểm định). | Nominal (Danh nghĩa), Ordinal (Thứ tự), Scale (Định lượng) |
-| 11 | Role | Vai trò của biến trong mô hình (Input, Target, Both, None). | Mặc định = Input |
+Mỗi biến số trong SPSS được quản lý bởi 11 thuộc tính cơ bản sau:
 
-### Chi tiết về thuộc tính Thang đo (Measure):
-1. Nominal (Thang đo danh nghĩa): Các giá trị phân loại không có thứ tự hơn kém (Ví dụ: Giới tính, Nhóm máu, Tỉnh thành, Nhóm điều trị).
-2. Ordinal (Thang đo thứ tự): Các giá trị phân loại có mối quan hệ thứ tự hơn kém rõ rệt (Ví dụ: Mức độ hài lòng: 1-Rất không hài lòng -> 5-Rất hài lòng; Giai đoạn ung thư: I, II, III, IV).
-3. Scale (Thang đo khoảng / tỷ lệ - Biến định lượng): Biến số dạng đo lường liên tục hoặc đếm được (Ví dụ: Tuổi, Cân nặng, Huyết áp, Điểm đánh giá hài lòng).
+1. **Name (Tên biến)**: Tên viết tắt của biến số.
+   - Quy tắc: Viết liền không khoảng trắng, không chứa ký tự đặc biệt, không bắt đầu bằng chữ số, không dùng tiếng Việt có dấu.
+   - Ví dụ: `tuoi`, `gioi_tinh`, `BMI`, `sBP`.
+2. **Type (Kiểu dữ liệu)**:
+   - `Numeric`: Dữ liệu dạng số (tuổi, chiều cao, huyết áp).
+   - `String`: Dữ liệu dạng chuỗi văn bản (ghi chú, mã định danh).
+   - `Date`: Dữ liệu dạng ngày tháng (ngày vào viện, ngày ra viện).
+3. **Width (Độ rộng)**: Số ký tự tối đa được phép nhập. Mặc định là 8.
+4. **Decimals (Số chữ số thập phân)**: Số chữ số sau dấu phẩy. Đối với biến số nguyên hoặc biến định tính mã hóa, đặ `Decimals = 0`.
+5. **Label (Nhãn biến)**: Mô tả chi tiết ý nghĩa của biến số, cho phép viết tiếng Việt có dấu và khoảng trắng.
+   - Ví dụ: `"Giới tính bệnh nhân"`, `"Huyết áp tâm thu lúc vào viện (mmHg)"`.
+6. **Values (Nhãn giá trị mã hóa)**: Gán nhãn chữ cho các mã số định tính.
+   - Ví dụ: `1 = Nam`, `2 = Nữ`; `1 = Nhẹ`, `2 = Vừa`, `3 = Nặng`.
+7. **Missing (Giá trị khuyết thiếu)**: Khai báo các mã số được quy ước là thiếu dữ liệu (User-defined missing values), ví dụ gán `99` hoặc `999`.
+8. **Columns (Độ rộng hiển thị cột)**: Độ rộng hiển thị của cột trên giao diện Data View.
+9. **Align (Căn lề)**: Căn lề dữ liệu (`Left`, `Right`, `Center`). Mặc định biến số căn phải, biến chuỗi căn trái.
+10. **Measure (Thang đo thống kê)**:
+    - `Nominal` (Danh nghĩa): Các giá trị phân loại không có thứ tự hơn kém (Giới tính, Nhóm máu, Tỉnh thành).
+    - `Ordinal` (Thứ tự): Các giá trị phân loại có mối quan hệ thứ tự rõ ràng (Mức độ đau: Nhẹ < Vừa < Nặng; Giai đoạn ung thư: I < II < III < IV).
+    - `Scale` (Định lượng): Biến đo lường liên tục hoặc đếm được (Tuổi, Cân nặng, Huyết áp, Chiều cao).
+11. **Role (Vai trò của biến)**: Vai trò trong mô hình phân tích (`Input`, `Target`, `Both`, `None`). Mặc định để `Input`.
 
 ---
 
-## 4. Quy Trình Nhập Dữ Liệu Và Kiểm Soát Chất Lượng
+## 4. Quy Trình Khai Báo Bộ Biến Số Và Nhập Dữ Liệu
 
-Các bước thực hiện nhập dữ liệu nghiên cứu chuẩn:
-1. Xây dựng Phiếu thu thập số liệu / Bệnh án nghiên cứu.
-2. Khai báo biến trong Variable View.
-3. Gán mã hóa Values & Missing.
-4. Nhập dữ liệu trong Data View.
-5. Kiểm tra làm sạch dữ liệu & Sửa lỗi logic.
-6. Lưu tệp tin dưới dạng .SAV.
-
-### Các nguyên tắc nhập liệu chuẩn y học:
-1. Mã hóa số hóa: Không nhập chữ trực tiếp vào biến định tính (ví dụ không nhập "Nam", "Nữ" mà nhập 1, 2 đã gán Values).
-2. Thống nhất định dạng ngày: Khai báo đúng Type = Date (dạng dd-mmm-yyyy hoặc dd.mm.yyyy) để tính toán khoảng thời gian sau này.
-3. Lưu trữ dữ liệu: Tệp dữ liệu SPSS có phần mở rộng là .sav. Tệp kết quả đầu ra hiển thị có phần mở rộng là .spv.
+> **Các bước chuẩn bị bộ số liệu nghiên cứu chuẩn:**
+> 1. Xây dựng phiếu thu thập số liệu / Bệnh án nghiên cứu.
+> 2. Khai báo danh sách biến số trong màn hình `Variable View`.
+> 3. Thiết lập chính xác `Values` mã hóa và thang đo `Measure`.
+> 4. Chuyển sang màn hình `Data View` và tiến hành nhập liệu theo từng hàng (đối tượng).
+> 5. Kiểm tra tính hợp lý của dữ liệu (làm sạch dữ liệu).
+> 6. Lưu file dữ liệu với định dạng `.sav`.
 
 ---
 
 ## 5. Nhập Dữ Liệu Từ Các Nguồn Bên Ngoài (Excel, CSV, Stata)
 
-Thực tế nghiên cứu thường thu thập số liệu qua Google Forms hoặc Excel. Các bước nhập dữ liệu từ Excel vào SPSS:
+Thực tế nghiên cứu thường thu thập số liệu thông qua Google Forms hoặc file Excel (.xlsx). Các bước nhập file Excel vào SPSS:
 
-1. Chọn menu: File > Open > Data... (hoặc File > Import Data > Excel...).
-2. Chọn file Excel .xlsx cần nhập.
-3. Trong hộp thoại Read Excel File:
-   - Tích chọn Read variable names from the first row of data (Đọc tên biến từ hàng đầu tiên).
-   - Chọn Sheet làm việc chứa dữ liệu.
-4. Bấm OK.
-5. Sau khi mở file thành công, chuyển ngay sang Variable View để điều chỉnh lại thang đo (Measure), nhãn biến (Label) và gán nhãn giá trị (Values).
+```text
+File > Import Data > Excel...
+```
+
+> **Các thiết lập trong hộp thoại Read Excel File:**
+> - Tích chọn `Read variable names from the first row of data` để lấy dòng đầu tiên làm tên biến.
+> - Chọn đúng `Worksheet` chứa dữ liệu.
+> - Bấm `OK` để hoàn tất nhập liệu, sau đó chuyển sang `Variable View` để kiểm tra lại `Measure` và gán `Values`.
+
+---
+
+## Điều Hướng Bài Học
+
+[Mục lục](0-muc-luc.md) | [Chương Sau: Quản lý và Biến đổi Dữ liệu >](2-quan-ly-va-bien-doi-du-lieu.md)
